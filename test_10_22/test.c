@@ -1,25 +1,85 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<math.h>
-struct Stu
-{
-    char name[20];
-    char sex[5];
-    int age;
-};
-void Print(struct Stu* ps)
-{
-    //printf("%s %s %d\n", (*ps).name, (*ps).sex, (*ps).age);
-    //->
-    //结构体的指针->成员名
-    printf("%s %s %d\n", ps->name, ps->sex, ps->age);
-}
+
 int main()
 {
-    struct Stu s = {"zhangsan","男",20};
-    Print(&s);
+    int day = 0;
+    scanf("%d",&day);
+    switch (day)
+    {
+        case 1:
+            printf("星期一\n");
+            break;
+        case 2:
+            printf("星期二\n");
+            break;
+        case 3:
+            printf("星期三\n");
+            break;
+        case 4:
+            printf("星期四\n");
+            break;
+        case 5:
+            printf("星期五\n");
+            break;
+        case 6:
+            printf("星期六\n");
+            break;
+        case 7:
+            printf("星期天\n");
+            break;
+        default :
+            printf("输入错误\n");
+    }
     return 0;
 }
+//int main()
+//{
+//	int age = 0;
+//	scanf("%d",&age);
+//	if (age < 18)
+//		printf("未成年\n");
+//	else if (age >= 18 && age < 30)
+//		printf("青年\n");
+//	else if (age >= 30 && age < 50)
+//		printf("壮年\n");
+//	else if (age >= 50 && age < 70)
+//		printf("老年\n");
+//	else if (age >= 70 && age < 100)
+//		printf("老寿星\n");
+//	return 0;
+//}
+//int main()
+//{
+//	int i = 0;
+//	printf("你要好好学习吗？\n(1/0)");
+//	scanf("%d",&i);
+//	if (i == 1)
+//		printf("拿到好offer\n");
+//	else
+//		printf("回家卖红薯\n");
+//	return 0;
+//}
+//struct Stu
+//{
+//    char name[20];
+//    char sex[5];
+//    int age;
+//};
+//void Print(struct Stu* ps)
+//{
+//    //printf("%s %s %d\n", (*ps).name, (*ps).sex, (*ps).age);
+//    //->
+//    //结构体的指针->成员名
+//    printf("%s %s %d\n", ps->name, ps->sex, ps->age);
+//}
+//int main()
+//{
+//    struct Stu s = {"zhangsan","男",20};
+//    Print(&s);
+//    return 0;
+//}
 
 
 //struct stu
