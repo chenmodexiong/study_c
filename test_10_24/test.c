@@ -1,16 +1,147 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
+
 #include<stdio.h>
 int main()
 {
-    int a = 0;
-    int b = 0;
-    int i, j;
-    scanf("%d%d", &a, &b);
-    i = a / b;
-    j = a % b;
-    printf("%d %d", i, j);
-    return 0;
+	int i = 0;
+
+	return 0;
 }
+//int main()
+//{
+//	int i = 0;
+//	int sum = 0;
+//	int ret = 1;
+//	int n = 0;
+//	scanf("%d",&n);
+//	for (n = 1; n <=3; n++)
+//	{
+//		ret = 1;
+//		for (i = 1; i <= n; i++)
+//		{
+//			ret = ret * i;
+//		}
+//		sum = ret + sum;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int Y = 0;
+//    int n = 0;
+//    int k = 0;
+//    scanf("%d %d %d", &Y, &k, &n);
+//    int i = n / k;
+//    int ret = 2;
+//    while (ret < n - Y)
+//    {
+//        if (Y < n)
+//        {
+//            printf("%d ", ret);
+//            ret = ret + i;
+//        }
+//    }
+//    if (Y == n)
+//        printf("0 \n");
+//    else if (Y > n)
+//        printf("-1\n");
+//    return 0;
+//}
+//int main()
+//{
+//    int n = 0;
+//    int m = 0;
+//    scanf("%d %d", &n, &m);
+//    char ch = 0;
+//    int i = 0;
+//    int j = 0;
+//    for(j=1;j<=n;j++)
+//    {
+//        for (i = 1; i <= m; i++)
+//        {
+//            while (scanf("%c", &ch) != EOF)
+//            {
+//            }
+//        }
+//    }
+//    return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    int m = 0;
+//    scanf("%d %d", &n, &m);
+//    char ch = 0;
+//    while (scanf("%c", &ch) != EOF)
+//    {
+//        int i = 0;
+//        for (i = 1; i <= m; i++)
+//        {
+//            printf("%c", ch);
+//        }
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int Y = 0;
+//    int n = 0;
+//    int k = 0;
+//    scanf("%d %d %d", &Y, &k, &n);
+//    int i = n / k;
+//    int ret = 2;
+//    while (ret < n - Y)
+//    {
+//        if (Y < n)
+//        {
+//            printf("%d ", ret);
+//            ret = ret + i;
+//        }
+//    }
+//    if (Y == n)
+//        printf("0 \n");
+//    else if (Y > n)
+//        printf("-1\n");
+//    return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    scanf("%d %d", &a, &b);
+//    //a = (float)a;
+//    //b = (float)b;
+//    float ret = (float)a /(float) b;
+//    printf("%.3f", ret);
+//    return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d", &n);
+//    if ((n > 50 && n <= 100) && n % 2 == 0)
+//        printf("YES\n");
+//    else
+//        printf("NO\n");
+//    return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    int i, j;
+//    scanf("%d%d", &a, &b);
+//    i = a / b;
+//    j = a % b;
+//    printf("%d %d", i, j);
+//    return 0;
+//}
 //int main()
 //{
 //    char i = 0;
