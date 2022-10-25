@@ -1,22 +1,93 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-
 int main()
 {
-	int a = 0, b = 0;
-	for (a = 1, b = 1; a <= 100; a++)
-	{
-		if (b >= 20) break;
-		if (b % 3 == 1)
-		{
-			b = b + 3;
-			continue;
-		}
-		b = b - 5;
-	}
-	printf("%d\n", a);
+	int x = 10;
+	int y = 8;
+	int i = (x > y ? x : y);
+	printf("%d\n",i);
 	return 0;
 }
+//int main()
+//{
+//	int i = 10;
+//	printf("%f\n",(float)i);
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[] = {1,2,3,4,5,6,7,8};
+//	printf("%d\n", sizeof(int));
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", sz);
+//	return 0;
+//}
+//int main()
+//{
+//	int i = 1;
+//	if (!i)
+//		printf("%d\n", i);
+//	return 0;
+//}
+//int main()
+//{
+//	int i = 19;
+//	int j = 3;
+//	printf("%d\n",i%j);
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d\n",arr[i]);
+//	}
+//	return 0;
+//}
+//int Add(int x, int y)
+//{
+//	int z=0;
+//	z=x + y;
+//	return z;
+//}
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	int sum = 0;
+//	scanf("%d %d", &num1, &num2);
+//	sum=Add(num1, num2);
+//	printf("sum=%d\n", sum);
+//	return 0;
+//}
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	int sum = 0;
+//	scanf("%d %d",&num1,&num2);
+//	//sum = num1 + num2;
+//	printf("sum=%d\n",sum);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 0, b = 0;
+//	for (a = 1, b = 1; a <= 100; a++)
+//	{
+//		if (b >= 20) break;
+//		if (b % 3 == 1)
+//		{
+//			b = b + 3;
+//			continue;
+//		}
+//		b = b - 5;
+//	}
+//	printf("%d\n", a);
+//	return 0;
+//}
 
 //int main()
 //{
