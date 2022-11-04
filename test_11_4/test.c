@@ -147,6 +147,88 @@
 //}
 
 //静下心来认真细致
+//
+//汉诺塔问题
+
+#include<stdio.h>
+
+void hanoi(int n,char A,char B,char C)
+{
+	if (n == 1)     //当只有一个圆盘时
+	{
+		printf("%c->%c\n",A,A);
+	}
+	else          
+	{
+		hanoi(n - 1, A, C, B);//把n-1个圆盘从A绕过C挪到B上
+		printf("%c->%c\n",A,C);//把A底下那个圆盘挪到C上
+		hanoi(n-1,B,A,C);//问题变成了把n-1个圆盘从B挪到C上，这样递归下去；
+	}
+}
+
+int main()
+{
+	int n = 0;
+	scanf("%d",&n);
+	hanoi(n,'A', 'B', 'C');
+	return 0;
+}
+
+////青蛙跳台阶问题
+//
+//#include<stdio.h>
+//
+//int num(int n)
+//{
+//	if (n == 1)
+//	{
+//		return 1;
+//	}
+//	else if (n == 2)
+//	{
+//		return 2;
+//	}
+//	else
+//	{
+//		return num(n - 1) + num(n - 2);
+//	}
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d",&n);
+//	int ret = num(n);
+//	printf("一共有%d种跳法\n",ret);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int Fib(int n)
+//{
+//	if (n <= 2)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return Fib(n - 1) + Fib(n - 2);
+//	}
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d",&n);
+//	int ret = Fib(n);
+//	printf("%d\n",ret);
+//
+//	return 0;
+//}
+
+
+
 
 
 
