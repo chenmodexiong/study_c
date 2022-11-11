@@ -79,7 +79,8 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	while (1)
+	int win = 0;
+	while (win<row*col-EasyCount)
 	{
 		printf("请输入要排查的坐标：>");
 		scanf("%d %d", &x, &y);
@@ -98,6 +99,7 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 				int n = GetMineCount(mine, x, y);
 				show[x][y] = n + '0'; //注意此处是字符，千万不要直接写数字
 				DisplayBoard(show,ROW,COL);
+				win++;
 			}
 		}
 		else
@@ -105,5 +107,10 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 			printf("坐标非法，请重新输入：>");
 		}
 	}
-
+	if (win == row * col - EasyCount)
+	{
+		printf("恭喜你，排雷成功\n");
+		Sleep(3000);
+		system("cls");
+	}
 }
