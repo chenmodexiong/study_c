@@ -55,6 +55,10 @@ void InitContact(Contact* pc)
 	ptr = NULL;
 	pc->sz = 0;
 	pc->capacity = DEFAULT_MIN;
+
+	//加载文件中联系人信息
+	LoadContact(pc);
+
 }
 
 int FindByName(const Contact* pc,char* name)
@@ -205,3 +209,49 @@ void DestroyContact(Contact* pc)
 	pc->capacity = 0;
 	pc = NULL;
 }
+
+
+void SaveContact(Contact* pc)
+{
+	assert(pc);
+	FILE* pf = fopen("Contact.txt", "wb");
+	if (pf == NULL)
+	{
+		perror("SaveContact");
+		return;
+	}
+	int i = 0;
+	for (i = 0; i < pc->sz; i++)
+	{
+		fwrite(pc->date + i, sizeof(PeoInfo), 1, pf);
+	}
+	fclose(pf);
+	pf = NULL;
+	printf("保存成功\n");
+}
+
+void LoadContact(Contact* pc)
+{
+	assert(pc);
+	FILE* pf = fopen("Contact.txt", "rb");
+	if (pf == NULL)
+	{
+		perror("LoadContact");
+		return;
+	}
+	//读数据
+	PeoInfo tmp = {0};
+	int i = 0;
+	while (fread(&tmp, sizeof(PeoInfo), 1, pf))
+	{
+		//增容
+		check_capacity(pc);
+		pc->date[i] = tmp;
+		pc->sz++;
+		i++;
+	}
+	fclose(pf);
+	pf = NULL;
+}
+
+
